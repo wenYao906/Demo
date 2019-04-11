@@ -16,7 +16,7 @@ class SLoginController: UIViewController {
         
         
         let slogin = SLoginView(frame: CGRect(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight - 64))
-        
+        slogin.delegate = self
         self.view.addSubview(slogin)
     
     }
@@ -30,6 +30,27 @@ class SLoginController: UIViewController {
 }
 
 // MARK:- UIView
-extension SLoginController {
+extension SLoginController: SLoginViewDelegate {
+    
+    func phoneAreaClick() {
+        print("跳转到了 控制器 ")
+        
+        let phoneAreaVC = SPhoneAreaController()
+        self.present(phoneAreaVC, animated: true, completion: nil)
+    }
+    
+    func phoneTextField(text: String) {
+        
+        print("phoneTextField.text = \(text)")
+    }
+    
+    func loginButtonClick(phoneNumber: String) {
+        print("点击了 按钮 ")
+    }
+    
+    func soulUserAgreementConsent() {
+        print("点击了 同意协议")
+    }
+    
     
 }

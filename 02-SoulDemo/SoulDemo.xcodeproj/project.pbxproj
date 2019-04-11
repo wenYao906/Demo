@@ -19,6 +19,7 @@
 		203A87A0225EC1F90045B57C /* SFrameTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A879F225EC1F90045B57C /* SFrameTool.swift */; };
 		203A87A2225EC66F0045B57C /* WYCircleLoadAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87A1225EC66F0045B57C /* WYCircleLoadAnimationView.swift */; };
 		203A87A5225EF0A70045B57C /* Ext_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87A4225EF0A70045B57C /* Ext_String.swift */; };
+		203A87A7225F12BA0045B57C /* SPhoneAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87A6225F12BA0045B57C /* SPhoneAreaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		203A879F225EC1F90045B57C /* SFrameTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFrameTool.swift; sourceTree = "<group>"; };
 		203A87A1225EC66F0045B57C /* WYCircleLoadAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYCircleLoadAnimationView.swift; sourceTree = "<group>"; };
 		203A87A4225EF0A70045B57C /* Ext_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_String.swift; sourceTree = "<group>"; };
+		203A87A6225F12BA0045B57C /* SPhoneAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPhoneAreaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				203A8799225D9B290045B57C /* SLoginController.swift */,
+				203A87A6225F12BA0045B57C /* SPhoneAreaController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				203A87A2225EC66F0045B57C /* WYCircleLoadAnimationView.swift in Sources */,
 				203A870F225D8C8C0045B57C /* AppDelegate.swift in Sources */,
 				203A87A0225EC1F90045B57C /* SFrameTool.swift in Sources */,
+				203A87A7225F12BA0045B57C /* SPhoneAreaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
