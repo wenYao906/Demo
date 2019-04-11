@@ -15,8 +15,7 @@ class SLoginController: UIViewController {
 
         
         
-        let slogin = SLoginView(frame: CGRect(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight))
-//        slogin.backgroundColor = UIColor.yellow
+        let slogin = SLoginView(frame: CGRect(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight - 64))
         
         self.view.addSubview(slogin)
     

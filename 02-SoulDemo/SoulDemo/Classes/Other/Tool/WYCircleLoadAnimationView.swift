@@ -51,14 +51,9 @@ extension WYCircleLoadAnimationView {
     }
     
     private func setupCGColor(type: typeLocation) -> [CGColor]{
-        
-        //定义渐变的颜色： 黑色到白色（从黄色渐变到橙色）
-        // UIColor(red: 0xfe/255, green: 0xd3/255, blue: 0x2f/255, alpha: 1)
-        
         // 黑色
         let topColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1)
-        // UIColor(red: 0xfc/255, green: 0x68/255, blue: 0x20/255, alpha: 1)
-        
+
         // 白色
         let buttomColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 0)
         
@@ -70,7 +65,6 @@ extension WYCircleLoadAnimationView {
             // 黑色 - 白色
             gradientColors = [topColor.cgColor, buttomColor.cgColor]
             
-            
         } else { // 右侧
             // 白色 - 黑色
             gradientColors = [buttomColor.cgColor, topColor.cgColor]
@@ -78,5 +72,4 @@ extension WYCircleLoadAnimationView {
         
         return gradientColors!
     }
-    
 }

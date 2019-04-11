@@ -10,10 +10,17 @@ import UIKit
 
 class SLoginView: UIView {
 
+    private let phoneField = UITextField()
+
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupHeaderView()
+        
+        setupPhoneNumberView()
+        
+        setupBottonView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -24,7 +31,7 @@ class SLoginView: UIView {
 }
 
 extension SLoginView {
-    // 上: 图片， 文本框 
+    // 上: 图片（上）， 文本框 （下）
     private func setupHeaderView() {
         let aIW: CGFloat = 100
         let aIH: CGFloat = 50
@@ -69,11 +76,145 @@ extension SLoginView {
         let rightView = WYCircleLoadAnimationView.init(frame: frameF, type: typeLocation.typeLeft)
         self.addSubview(rightView)
     }
-    
-    // 中
-    
-    
-    // 下
 }
 
+
+// MARK:- 手机号码 View
+extension SLoginView {
+    private func setupPhoneNumberView() {
+        setupTitleView()
+        setupPhoneFieldView()
+        
+        
+    }
+    
+    /// 标签 - 图片(左) 和 文本框（右）
+    private func setupTitleView() {
+        let aIW: CGFloat = 14
+        let aIH: CGFloat = 18
+        let aIX: CGFloat = 40
+        let aIY: CGFloat = 210
+        let aIFrame = CGRect(x: aIX, y: aIY, width: aIW, height: aIH)
+        let image = UIImageView(frame: aIFrame)
+        image.image = UIImage(named: "phone")
+        
+        self.addSubview(image)
+        
+        
+        // 文本
+        let aHLX: CGFloat = 66
+        let aHLW: CGFloat = 60
+        let aHLFrame = CGRect(x: aHLX, y: aIY, width: aHLW, height: aIH)
+        let headLabel = UILabel(frame: aHLFrame)
+        headLabel.text = "手机号码"
+        headLabel.textColor = UIColor.black
+        headLabel.textAlignment = .center
+        headLabel.font = UIFont.systemFont(ofSize: 14)
+        
+        self.addSubview(headLabel)
+    }
+    
+    // 手机号码输入框 ： 区域按钮 和 文本输入框
+    private func setupPhoneFieldView() {
+        
+        // 区域号码
+        let areaBtn = UIButton.init(type: .custom)
+        areaBtn.frame = CGRect(x: 35, y: 234, width: 50, height: 54)
+        areaBtn.setTitle(" +86 ", for: .normal)
+        areaBtn.setTitleColor(UIColor.black, for: .normal)
+        areaBtn.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        areaBtn.addTarget(self, action: #selector(setAreaNumberClick), for: .touchUpInside)
+        self.addSubview(areaBtn)
+        
+      
+        phoneField.placeholder = "在这里输入手机号"
+        phoneField.font = UIFont.systemFont(ofSize: 20.0)
+        phoneField.addTarget(self, action: #selector(self.actButton(textField:)), for: .editingChanged)
+        
+        let aTFX: CGFloat = 117
+        let aTFW: CGFloat = kScreenWidth - 40 * 2 - areaBtn.frame.width
+        let aTFH: CGFloat = 54
+        let aTFY: CGFloat = 234
+        phoneField.frame = CGRect(x: aTFX, y: aTFY, width: aTFW, height: aTFH)
+        
+        self.addSubview(phoneField)
+        
+        let line = UILabel(frame: CGRect(x: 40, y: phoneField.frame.maxY + 1, width: kScreenWidth - 40 * 2, height: 0.5))
+        line.backgroundColor = UIColor.gray
+        self.addSubview(line)
+        
+        // 确定
+        let loginBtn = UIButton.init(type: .custom)
+        loginBtn.backgroundColor = UIColor.gray
+        
+        let aLBW: CGFloat = 160
+        let aLBH: CGFloat = 46
+        let aLBX: CGFloat = (kScreenWidth - aLBW) * 0.5
+        let aLBY: CGFloat = line.frame.maxY + 65
+        
+        loginBtn.frame = CGRect(x: aLBX, y: aLBY, width:aLBW, height: aLBH)
+        loginBtn.layer.cornerRadius = 16
+        loginBtn.setTitle("确定", for: .normal)
+        loginBtn.addTarget(self, action: #selector(loginClick), for: .touchUpInside)
+        loginBtn.clipsToBounds = true
+        loginBtn.backgroundColor = UIColor(red: 209/255.0, green: 209/255.0, blue: 209/255.0, alpha: 1)
+        loginBtn.setTitleColor(UIColor.white, for: .normal)
+        self.addSubview(loginBtn)
+    }
+}
+
+// MARK:- 同意提示
+extension SLoginView {
+    // 同意提示
+    private func setupBottonView() {
+        let label = UILabel()
+        
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 15)
+
+        label.frame = CGRect(x: 0, y: self.frame.height - 20 * 2, width: kScreenWidth, height: 20)
+        
+        self.addSubview(label)
+        
+//        let str = "我已阅读并同意Soul用户协议"
+        let sub = "我已阅读并同意Soul用户协议"
+        label.attributedText = self.getNSAttributedString(str: sub)
+    }
+    
+    //指定字符 指定颜色并加上下划线
+    func getNSAttributedString(str:String) -> NSAttributedString {
+        let myMutableString = NSMutableAttributedString(string: str)
+
+        let range2 = NSMakeRange(7, 8)
+        myMutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.green, range: range2)
+        myMutableString.addAttribute(NSAttributedString.Key.underlineStyle , value: 0, range: NSMakeRange(0, 6))
+        // 下划线
+        myMutableString.addAttribute(NSAttributedString.Key.underlineStyle , value: NSUnderlineStyle.single.rawValue, range: range2)
+        
+        return myMutableString
+    }
+}
+
+
+// MARK:- 点击了区域按钮，显示各个国家的手机号区域
+extension SLoginView {
+    /// 点击了区域按钮，显示各个国家的手机号区域
+    @objc private func setAreaNumberClick() {
+        print("跳转到一个界面，显示各个国家的手机号区域")
+    }
+    
+    @objc func actButton(textField: UITextField){
+//        self.delegate?.returnData(data: textField.text ?? "", placeholder: "在这里输入手机号")
+    }
+    
+    @objc private func loginClick() {
+        
+//        if (aTFPassword.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty) || (aTFPhone.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty) {
+//            print("用户名和密码不能为空")
+//            return
+//        }
+//
+//        delegate?.loginButtonClick(LoginView: self, userName: aTFPhone.text ?? "", password: aTFPassword.text ?? "")
+    }
+}
 
