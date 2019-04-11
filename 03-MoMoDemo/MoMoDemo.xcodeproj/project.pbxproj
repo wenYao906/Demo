@@ -97,6 +97,7 @@
 		203A8747225D8E770045B57C /* MoMoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				203A8776225D8F880045B57C /* Classes */,
 				203A8748225D8E770045B57C /* AppDelegate.swift */,
 				203A874A225D8E770045B57C /* ViewController.swift */,
 				203A874C225D8E770045B57C /* Main.storyboard */,
@@ -123,6 +124,181 @@
 				203A876A225D8E780045B57C /* Info.plist */,
 			);
 			path = MoMoDemoUITests;
+			sourceTree = "<group>";
+		};
+		203A8776225D8F880045B57C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				203A8777225D8F880045B57C /* Home */,
+				203A877C225D8F880045B57C /* Message */,
+				203A8781225D8F880045B57C /* Me */,
+				203A8786225D8F880045B57C /* Login */,
+				203A878B225D8F880045B57C /* Base */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		203A8777225D8F880045B57C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				203A8778225D8F880045B57C /* Controller */,
+				203A8779225D8F880045B57C /* Cell */,
+				203A877A225D8F880045B57C /* model */,
+				203A877B225D8F880045B57C /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		203A8778225D8F880045B57C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		203A8779225D8F880045B57C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		203A877A225D8F880045B57C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		203A877B225D8F880045B57C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		203A877C225D8F880045B57C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				203A877D225D8F880045B57C /* Controller */,
+				203A877E225D8F880045B57C /* Cell */,
+				203A877F225D8F880045B57C /* model */,
+				203A8780225D8F880045B57C /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		203A877D225D8F880045B57C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		203A877E225D8F880045B57C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		203A877F225D8F880045B57C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		203A8780225D8F880045B57C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		203A8781225D8F880045B57C /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				203A8782225D8F880045B57C /* Controller */,
+				203A8783225D8F880045B57C /* Cell */,
+				203A8784225D8F880045B57C /* model */,
+				203A8785225D8F880045B57C /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		203A8782225D8F880045B57C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		203A8783225D8F880045B57C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		203A8784225D8F880045B57C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		203A8785225D8F880045B57C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		203A8786225D8F880045B57C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				203A8787225D8F880045B57C /* Controller */,
+				203A8788225D8F880045B57C /* Cell */,
+				203A8789225D8F880045B57C /* model */,
+				203A878A225D8F880045B57C /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		203A8787225D8F880045B57C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		203A8788225D8F880045B57C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		203A8789225D8F880045B57C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		203A878A225D8F880045B57C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		203A878B225D8F880045B57C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
