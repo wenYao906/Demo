@@ -16,6 +16,8 @@
 		203A872F225D8C8E0045B57C /* SoulDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A872E225D8C8E0045B57C /* SoulDemoUITests.swift */; };
 		203A879A225D9B290045B57C /* SLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A8799225D9B290045B57C /* SLoginController.swift */; };
 		203A879C225D9B610045B57C /* SLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A879B225D9B610045B57C /* SLoginView.swift */; };
+		203A87A0225EC1F90045B57C /* SFrameTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A879F225EC1F90045B57C /* SFrameTool.swift */; };
+		203A87A2225EC66F0045B57C /* WYCircleLoadAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87A1225EC66F0045B57C /* WYCircleLoadAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		203A8730225D8C8E0045B57C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203A8799225D9B290045B57C /* SLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLoginController.swift; sourceTree = "<group>"; };
 		203A879B225D9B610045B57C /* SLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLoginView.swift; sourceTree = "<group>"; };
+		203A879F225EC1F90045B57C /* SFrameTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFrameTool.swift; sourceTree = "<group>"; };
+		203A87A1225EC66F0045B57C /* WYCircleLoadAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYCircleLoadAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		203A878C225D9AFC0045B57C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				203A879D225EC1E30045B57C /* Other */,
 				203A878D225D9AFC0045B57C /* Main */,
 				203A8792225D9AFC0045B57C /* Login */,
 			);
@@ -217,6 +222,23 @@
 				203A879B225D9B610045B57C /* SLoginView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		203A879D225EC1E30045B57C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				203A879E225EC1E30045B57C /* Tool */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		203A879E225EC1E30045B57C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				203A879F225EC1F90045B57C /* SFrameTool.swift */,
+				203A87A1225EC66F0045B57C /* WYCircleLoadAnimationView.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,7 +375,9 @@
 				203A879A225D9B290045B57C /* SLoginController.swift in Sources */,
 				203A8711225D8C8C0045B57C /* ViewController.swift in Sources */,
 				203A879C225D9B610045B57C /* SLoginView.swift in Sources */,
+				203A87A2225EC66F0045B57C /* WYCircleLoadAnimationView.swift in Sources */,
 				203A870F225D8C8C0045B57C /* AppDelegate.swift in Sources */,
+				203A87A0225EC1F90045B57C /* SFrameTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

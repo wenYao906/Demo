@@ -13,10 +13,21 @@ class SLoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        
+        let slogin = SLoginView(frame: CGRect(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight))
+//        slogin.backgroundColor = UIColor.yellow
+        
+        self.view.addSubview(slogin)
+    
     }
 
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // 隐藏导航栏
+        self.navigationController?.navigationBar.isHidden = true
+    }
 }
 
 // MARK:- UIView

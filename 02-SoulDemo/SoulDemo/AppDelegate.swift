@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window?.backgroundColor = UIColor.white
+        
+        // 登录界面
+        self.window?.rootViewController = UINavigationController(rootViewController: SLoginController())
+            
+        window?.makeKeyAndVisible()
+
+
         return true
     }
 
