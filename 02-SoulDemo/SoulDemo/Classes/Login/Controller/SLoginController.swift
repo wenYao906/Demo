@@ -51,6 +51,4 @@ extension SLoginController: SLoginViewDelegate {
     func soulUserAgreementConsent() {
         print("点击了 同意协议")
     }
-    
-    
 }
