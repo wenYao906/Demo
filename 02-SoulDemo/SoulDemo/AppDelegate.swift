@@ -13,14 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window?.backgroundColor = UIColor.white
         
         // 登录界面
         self.window?.rootViewController = UINavigationController(rootViewController: SLoginController())
-            
         window?.makeKeyAndVisible()
 
 

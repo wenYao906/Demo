@@ -11,18 +11,29 @@ import UIKit
 class SPhoneAreaController: UIViewController {
 
     private var tableView: UITableView?
+    var dataPlist: NSArray?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTableView()
+        
+        dataPlist = SPlistTool.plistWithAreaCode()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 显示导航栏
+        self.navigationController?.navigationBar.isHidden = false
     }
 }
 
 // MARK:- 创建 UITableView 视图
 extension SPhoneAreaController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataPlist?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,12 +41,20 @@ extension SPhoneAreaController: UITableViewDelegate, UITableViewDataSource {
         var cell = tableView.dequeueReusableCell(withIdentifier: indentifier)
         
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: indentifier)
+            cell = UITableViewCell(style: .value1, reuseIdentifier: indentifier)
             cell?.backgroundColor = UIColor.yellow
             cell?.selectionStyle = .none;
         }
         
-        cell?.textLabel?.text = "index" + "\(indexPath.row)"
+        /// 每个国家
+        let aCountry = dataPlist?[indexPath.row] as! NSArray
+        /// 国家的名字
+        let countryName = aCountry[0] as! String
+        /// 国家的区号
+        let countryAreaNo = aCountry[1]  as! String
+        
+        cell?.textLabel?.text = countryName
+        cell?.detailTextLabel?.text = countryAreaNo
         
         return cell!
     }
@@ -53,19 +72,6 @@ extension SPhoneAreaController {
         tableView?.separatorStyle = .none
         tableView?.backgroundColor = UIColor.lightGray
         
-        // 设置内容缩进
-        tableView?.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
-        if #available(iOS 11.0, *) {
-            
-            var top_inset :CGFloat = 0
-            if kScreenHeight == 812 {
-                top_inset = 84
-            } else {
-                top_inset = 64 //  - 20
-            }
-            
-            tableView?.contentInset = UIEdgeInsets(top: top_inset, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
-        }
         tableView?.scrollIndicatorInsets = (tableView?.contentInset)!
     }
 }

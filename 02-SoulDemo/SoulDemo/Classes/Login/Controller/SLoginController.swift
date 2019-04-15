@@ -36,7 +36,7 @@ extension SLoginController: SLoginViewDelegate {
         print("跳转到了 控制器 ")
         
         let phoneAreaVC = SPhoneAreaController()
-        self.present(phoneAreaVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(phoneAreaVC, animated: true)
     }
     
     func phoneTextField(text: String) {

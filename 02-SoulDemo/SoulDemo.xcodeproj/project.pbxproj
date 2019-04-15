@@ -20,6 +20,10 @@
 		203A87A2225EC66F0045B57C /* WYCircleLoadAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87A1225EC66F0045B57C /* WYCircleLoadAnimationView.swift */; };
 		203A87A5225EF0A70045B57C /* Ext_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87A4225EF0A70045B57C /* Ext_String.swift */; };
 		203A87A7225F12BA0045B57C /* SPhoneAreaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87A6225F12BA0045B57C /* SPhoneAreaController.swift */; };
+		203A87A9226024B40045B57C /* number3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 203A87A8226024B40045B57C /* number3.plist */; };
+		203A87AB2260333F0045B57C /* areaCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 203A87AA2260333F0045B57C /* areaCodes.plist */; };
+		203A87AD226034440045B57C /* SPlistTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87AC226034440045B57C /* SPlistTool.swift */; };
+		203A87AF22641B530045B57C /* SFuncTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87AE22641B530045B57C /* SFuncTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		203A87A1225EC66F0045B57C /* WYCircleLoadAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYCircleLoadAnimationView.swift; sourceTree = "<group>"; };
 		203A87A4225EF0A70045B57C /* Ext_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_String.swift; sourceTree = "<group>"; };
 		203A87A6225F12BA0045B57C /* SPhoneAreaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPhoneAreaController.swift; sourceTree = "<group>"; };
+		203A87A8226024B40045B57C /* number3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = number3.plist; sourceTree = "<group>"; };
+		203A87AA2260333F0045B57C /* areaCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areaCodes.plist; sourceTree = "<group>"; };
+		203A87AC226034440045B57C /* SPlistTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPlistTool.swift; sourceTree = "<group>"; };
+		203A87AE22641B530045B57C /* SFuncTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFuncTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,8 +249,12 @@
 		203A879E225EC1E30045B57C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				203A87AA2260333F0045B57C /* areaCodes.plist */,
+				203A87A8226024B40045B57C /* number3.plist */,
 				203A879F225EC1F90045B57C /* SFrameTool.swift */,
 				203A87A1225EC66F0045B57C /* WYCircleLoadAnimationView.swift */,
+				203A87AC226034440045B57C /* SPlistTool.swift */,
+				203A87AE22641B530045B57C /* SFuncTool.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -361,7 +373,9 @@
 			files = (
 				203A8719225D8C8E0045B57C /* LaunchScreen.storyboard in Resources */,
 				203A8716225D8C8E0045B57C /* Assets.xcassets in Resources */,
+				203A87AB2260333F0045B57C /* areaCodes.plist in Resources */,
 				203A8714225D8C8C0045B57C /* Main.storyboard in Resources */,
+				203A87A9226024B40045B57C /* number3.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,10 +401,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				203A87A5225EF0A70045B57C /* Ext_String.swift in Sources */,
+				203A87AF22641B530045B57C /* SFuncTool.swift in Sources */,
 				203A879A225D9B290045B57C /* SLoginController.swift in Sources */,
 				203A8711225D8C8C0045B57C /* ViewController.swift in Sources */,
 				203A879C225D9B610045B57C /* SLoginView.swift in Sources */,
 				203A87A2225EC66F0045B57C /* WYCircleLoadAnimationView.swift in Sources */,
+				203A87AD226034440045B57C /* SPlistTool.swift in Sources */,
 				203A870F225D8C8C0045B57C /* AppDelegate.swift in Sources */,
 				203A87A0225EC1F90045B57C /* SFrameTool.swift in Sources */,
 				203A87A7225F12BA0045B57C /* SPhoneAreaController.swift in Sources */,

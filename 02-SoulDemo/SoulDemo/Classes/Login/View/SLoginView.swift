@@ -56,14 +56,28 @@ extension SLoginView {
     /// 手机号输入框
     @objc func actButton(textField: UITextField){
         let text = textField.text ?? ""
+        
         self.delegate?.phoneTextField(text: text)
     }
     
     /// 确定按钮
     @objc private func loginClick() {
         
-        if (phoneField.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty)  {
+        let phoneText = phoneField.text!
+        
+        if (phoneText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty)  {
             print("手机号不能为空")
+            return
+        }
+        
+        if phoneText.count != 11 {
+            print("手机号码不正确")
+            return
+        }
+        
+        /// 判断手机号是否正确
+        if  !isTelNumber(num: phoneText) {
+            print("手机号码不正确")
             return
         }
 
@@ -76,7 +90,7 @@ extension SLoginView {
 
 // MARK:- app名称
 extension SLoginView {
-    // 上: 图片（上）， 文本框 （下）
+    // 上: 图片（上）， 文本标签 （下）
     private func setupHeaderView() {
         let aIW: CGFloat = 100
         let aIH: CGFloat = 50
@@ -107,7 +121,6 @@ extension SLoginView {
         headLabel.textColor = UIColor.black
         headLabel.textAlignment = .center
         headLabel.font = UIFont.systemFont(ofSize: 14)
-        headLabel.backgroundColor = UIColor.green
         
         self.addSubview(headLabel)
         
@@ -179,6 +192,7 @@ extension SLoginView {
         phoneField.placeholder = "在这里输入手机号"
         phoneField.font = UIFont.systemFont(ofSize: 20.0)
         phoneField.addTarget(self, action: #selector(self.actButton(textField:)), for: .editingChanged)
+        phoneField.keyboardType = .numberPad
         
         let aTFX: CGFloat = 117
         let aTFW: CGFloat = kScreenWidth - 40 * 2 - areaBtn.frame.width
@@ -248,6 +262,3 @@ extension SLoginView {
         return myMutableString
     }
 }
-
-
-
