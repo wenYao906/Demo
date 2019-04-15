@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 登录界面
         self.window?.rootViewController = UINavigationController(rootViewController: SLoginController())
+//        self.window?.rootViewController = UINavigationController(rootViewController: SAgreementController())
+
+        
         window?.makeKeyAndVisible()
 
 
