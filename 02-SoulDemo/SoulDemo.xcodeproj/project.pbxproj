@@ -24,6 +24,8 @@
 		203A87AB2260333F0045B57C /* areaCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 203A87AA2260333F0045B57C /* areaCodes.plist */; };
 		203A87AD226034440045B57C /* SPlistTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87AC226034440045B57C /* SPlistTool.swift */; };
 		203A87AF22641B530045B57C /* SFuncTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87AE22641B530045B57C /* SFuncTool.swift */; };
+		203A87B1226424C70045B57C /* SUserAgreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 203A87B0226424C60045B57C /* SUserAgreement.html */; };
+		203A87B3226424F10045B57C /* SAgreementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B2226424F10045B57C /* SAgreementController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		203A87AA2260333F0045B57C /* areaCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areaCodes.plist; sourceTree = "<group>"; };
 		203A87AC226034440045B57C /* SPlistTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPlistTool.swift; sourceTree = "<group>"; };
 		203A87AE22641B530045B57C /* SFuncTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFuncTool.swift; sourceTree = "<group>"; };
+		203A87B0226424C60045B57C /* SUserAgreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SUserAgreement.html; sourceTree = "<group>"; };
+		203A87B2226424F10045B57C /* SAgreementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAgreementController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,7 @@
 			children = (
 				203A8799225D9B290045B57C /* SLoginController.swift */,
 				203A87A6225F12BA0045B57C /* SPhoneAreaController.swift */,
+				203A87B2226424F10045B57C /* SAgreementController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 		203A879E225EC1E30045B57C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				203A87B0226424C60045B57C /* SUserAgreement.html */,
 				203A87AA2260333F0045B57C /* areaCodes.plist */,
 				203A87A8226024B40045B57C /* number3.plist */,
 				203A879F225EC1F90045B57C /* SFrameTool.swift */,
@@ -375,6 +381,7 @@
 				203A8716225D8C8E0045B57C /* Assets.xcassets in Resources */,
 				203A87AB2260333F0045B57C /* areaCodes.plist in Resources */,
 				203A8714225D8C8C0045B57C /* Main.storyboard in Resources */,
+				203A87B1226424C70045B57C /* SUserAgreement.html in Resources */,
 				203A87A9226024B40045B57C /* number3.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +416,7 @@
 				203A87AD226034440045B57C /* SPlistTool.swift in Sources */,
 				203A870F225D8C8C0045B57C /* AppDelegate.swift in Sources */,
 				203A87A0225EC1F90045B57C /* SFrameTool.swift in Sources */,
+				203A87B3226424F10045B57C /* SAgreementController.swift in Sources */,
 				203A87A7225F12BA0045B57C /* SPhoneAreaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

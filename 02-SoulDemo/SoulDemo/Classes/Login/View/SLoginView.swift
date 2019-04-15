@@ -250,15 +250,25 @@ extension SLoginView {
         
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 15)
-
         label.frame = CGRect(x: 0, y: self.frame.height - 20 * 2, width: kScreenWidth, height: 20)
-        
         self.addSubview(label)
         
-//        let str = "我已阅读并同意Soul用户协议"
         let sub = "我已阅读并同意Soul用户协议"
         label.attributedText = self.getNSAttributedString(str: sub)
+        
+        // 添加点击事件
+        label.isUserInteractionEnabled = true
+        let labelTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(labelTouchUpInside(recognizer:)))
+        label.addGestureRecognizer(labelTapGestureRecognizer)
     }
+    
+    @objc func labelTouchUpInside(recognizer: UITapGestureRecognizer) {
+        let label = recognizer.view as! UILabel
+        // print("\(label.text) 被点击了")
+        
+        self.delegate?.soulUserAgreementConsent()
+    }
+    
     
     //指定字符 指定颜色并加上下划线
     func getNSAttributedString(str:String) -> NSAttributedString {

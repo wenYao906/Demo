@@ -50,5 +50,9 @@ extension SLoginController: SLoginViewDelegate {
     
     func soulUserAgreementConsent() {
         print("点击了 同意协议")
+        
+        let agreeVC = SAgreementController()
+        self.navigationController?.pushViewController(agreeVC, animated: true)
+
     }
 }
