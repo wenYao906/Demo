@@ -29,6 +29,8 @@ class SLoginView: UIView {
     /// 代理
     weak var delegate: SLoginViewDelegate?
     
+    private let loginBtn = UIButton()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -57,6 +59,18 @@ extension SLoginView {
     @objc func actButton(textField: UITextField){
         let text = textField.text ?? ""
         
+        /*
+         让按钮无法点击的2种方法
+         1.button.enabled = NO; 此时会进入UIControlStateDisabled
+         2.button.userInterctionEnabled = NO;此时不会进入UIControlStateDisabled，继续保持当前的状态
+         */
+        if text.count == 11 {
+            loginBtn.backgroundColor = UIColor.blue
+            loginBtn.isUserInteractionEnabled = true
+        } else {
+            loginBtn.backgroundColor = UIColor(red: 209/255.0, green: 209/255.0, blue: 209/255.0, alpha: 1)
+            loginBtn.isUserInteractionEnabled = false
+        }
         self.delegate?.phoneTextField(text: text)
     }
     
@@ -211,9 +225,6 @@ extension SLoginView {
     /// 确定按钮
     private func setupBtnView() {
         // 确定
-        let loginBtn = UIButton.init(type: .custom)
-        loginBtn.backgroundColor = UIColor.gray
-        
         let aLBW: CGFloat = 160
         let aLBH: CGFloat = 46
         let aLBX: CGFloat = (kScreenWidth - aLBW) * 0.5
