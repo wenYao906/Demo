@@ -60,10 +60,18 @@ extension SAgreementController: UIWebViewDelegate {
             
             // changeInfo() 是 HTMl 中 按钮的方法名称
             let returnStr = webView.stringByEvaluatingJavaScript(from: "changeInfo()")
-            print(returnStr)
             webView.stopLoading()
             
-    
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        /// 不同意
+        if requestString!.hasSuffix("noAgreementBtn"){
+            // changeInfo() 是 HTMl 中 按钮的方法名称
+            let returnStr = webView.stringByEvaluatingJavaScript(from: "noAgreementBtnInfo()")
+            webView.stopLoading()
+            
+            
             self.navigationController?.popViewController(animated: true)
         }
         
