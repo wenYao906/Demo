@@ -26,6 +26,11 @@
 		203A87AF22641B530045B57C /* SFuncTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87AE22641B530045B57C /* SFuncTool.swift */; };
 		203A87B1226424C70045B57C /* SUserAgreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 203A87B0226424C60045B57C /* SUserAgreement.html */; };
 		203A87B3226424F10045B57C /* SAgreementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B2226424F10045B57C /* SAgreementController.swift */; };
+		203A87B5226565900045B57C /* SLoginTopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B4226565900045B57C /* SLoginTopicView.swift */; };
+		203A87B7226568B30045B57C /* SImageWithTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B6226568B30045B57C /* SImageWithTitleView.swift */; };
+		203A87B922656EA00045B57C /* SButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B822656EA00045B57C /* SButtonView.swift */; };
+		203A87BB226579650045B57C /* SLoginTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87BA226579650045B57C /* SLoginTipsView.swift */; };
+		20EA571522657C1F003FE2D2 /* SPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA571422657C1F003FE2D2 /* SPhoneNumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		203A87AE22641B530045B57C /* SFuncTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFuncTool.swift; sourceTree = "<group>"; };
 		203A87B0226424C60045B57C /* SUserAgreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SUserAgreement.html; sourceTree = "<group>"; };
 		203A87B2226424F10045B57C /* SAgreementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAgreementController.swift; sourceTree = "<group>"; };
+		203A87B4226565900045B57C /* SLoginTopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLoginTopicView.swift; sourceTree = "<group>"; };
+		203A87B6226568B30045B57C /* SImageWithTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SImageWithTitleView.swift; sourceTree = "<group>"; };
+		203A87B822656EA00045B57C /* SButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SButtonView.swift; sourceTree = "<group>"; };
+		203A87BA226579650045B57C /* SLoginTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLoginTipsView.swift; sourceTree = "<group>"; };
+		20EA571422657C1F003FE2D2 /* SPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPhoneNumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				203A879B225D9B610045B57C /* SLoginView.swift */,
+				203A87B4226565900045B57C /* SLoginTopicView.swift */,
+				203A87B6226568B30045B57C /* SImageWithTitleView.swift */,
+				203A87B822656EA00045B57C /* SButtonView.swift */,
+				203A87BA226579650045B57C /* SLoginTipsView.swift */,
+				20EA571422657C1F003FE2D2 /* SPhoneNumberView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -407,12 +422,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203A87B922656EA00045B57C /* SButtonView.swift in Sources */,
 				203A87A5225EF0A70045B57C /* Ext_String.swift in Sources */,
+				20EA571522657C1F003FE2D2 /* SPhoneNumberView.swift in Sources */,
+				203A87BB226579650045B57C /* SLoginTipsView.swift in Sources */,
 				203A87AF22641B530045B57C /* SFuncTool.swift in Sources */,
 				203A879A225D9B290045B57C /* SLoginController.swift in Sources */,
+				203A87B7226568B30045B57C /* SImageWithTitleView.swift in Sources */,
 				203A8711225D8C8C0045B57C /* ViewController.swift in Sources */,
 				203A879C225D9B610045B57C /* SLoginView.swift in Sources */,
 				203A87A2225EC66F0045B57C /* WYCircleLoadAnimationView.swift in Sources */,
+				203A87B5226565900045B57C /* SLoginTopicView.swift in Sources */,
 				203A87AD226034440045B57C /* SPlistTool.swift in Sources */,
 				203A870F225D8C8C0045B57C /* AppDelegate.swift in Sources */,
 				203A87A0225EC1F90045B57C /* SFrameTool.swift in Sources */,
