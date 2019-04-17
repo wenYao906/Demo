@@ -14,6 +14,9 @@
 		20EA57742266C256003FE2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20EA57722266C256003FE2D2 /* LaunchScreen.storyboard */; };
 		20EA577F2266C256003FE2D2 /* SVerifyCodeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA577E2266C256003FE2D2 /* SVerifyCodeDemoTests.swift */; };
 		20EA578A2266C257003FE2D2 /* SVerifyCodeDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA57892266C257003FE2D2 /* SVerifyCodeDemoUITests.swift */; };
+		20EA57982266C2B2003FE2D2 /* SVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA57972266C2B2003FE2D2 /* SVerifyCodeView.swift */; };
+		20EA579A2266C2D4003FE2D2 /* SVerifyCodeNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA57992266C2D4003FE2D2 /* SVerifyCodeNumView.swift */; };
+		20EA579C2266C2E3003FE2D2 /* SVerifyCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA579B2266C2E3003FE2D2 /* SVerifyCodeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		20EA57852266C257003FE2D2 /* SVerifyCodeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVerifyCodeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20EA57892266C257003FE2D2 /* SVerifyCodeDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVerifyCodeDemoUITests.swift; sourceTree = "<group>"; };
 		20EA578B2266C257003FE2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20EA57972266C2B2003FE2D2 /* SVerifyCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVerifyCodeView.swift; sourceTree = "<group>"; };
+		20EA57992266C2D4003FE2D2 /* SVerifyCodeNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVerifyCodeNumView.swift; sourceTree = "<group>"; };
+		20EA579B2266C2E3003FE2D2 /* SVerifyCodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVerifyCodeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				20EA57702266C256003FE2D2 /* Assets.xcassets */,
 				20EA57722266C256003FE2D2 /* LaunchScreen.storyboard */,
 				20EA57752266C256003FE2D2 /* Info.plist */,
+				20EA57972266C2B2003FE2D2 /* SVerifyCodeView.swift */,
+				20EA57992266C2D4003FE2D2 /* SVerifyCodeNumView.swift */,
+				20EA579B2266C2E3003FE2D2 /* SVerifyCodeTextView.swift */,
 			);
 			path = SVerifyCodeDemo;
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20EA57982266C2B2003FE2D2 /* SVerifyCodeView.swift in Sources */,
+				20EA579A2266C2D4003FE2D2 /* SVerifyCodeNumView.swift in Sources */,
 				20EA576C2266C255003FE2D2 /* ViewController.swift in Sources */,
 				20EA576A2266C255003FE2D2 /* AppDelegate.swift in Sources */,
+				20EA579C2266C2E3003FE2D2 /* SVerifyCodeTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
