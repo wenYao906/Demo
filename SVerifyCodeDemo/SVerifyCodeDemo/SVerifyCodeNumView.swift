@@ -11,21 +11,12 @@ import UIKit
 class SVerifyCodeNumView: UIView {
 
     /// 数字
-    private lazy var numLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 17)
-        self.addSubview(label)
-        return label
-    }()
+    private let numLabel = UILabel()
     
     /// 下划线
-    private lazy var lineView: UIView = {
-        let line = UIView()
-        line.backgroundColor = UIColor.blue
-        self.addSubview(line)
-        return line
-    }()
+    private let lineView = UIView ()
+    /// 宽度
+    open var aWidthFrame: CGFloat = 0
     
     /// 光标
     lazy var cursor: CAShapeLayer = {
@@ -67,17 +58,47 @@ class SVerifyCodeNumView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let aNLX: CGFloat = frame.origin.x
-        let aNLY: CGFloat = frame.origin.y
-        let aNLW: CGFloat = frame.size.width
-        let aNLH: CGFloat = frame.size.height - 0.5
-        numLabel.frame = CGRect(x: aNLX, y: aNLY, width: aNLW, height: aNLH)
+        print("frame = \(frame)")
         
-        let aLVY: CGFloat = numLabel.frame.maxY
+        setupUIView()
+        
+
+        NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(enterBack), name: UIApplication.didEnterBackgroundNotification, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let path = UIBezierPath.init(rect: CGRect.init(x: self.frame.size.width * 0.5, y: self.frame.size.height * 0.1, width: 1, height: self.frame.size.height * 0.7))
+        cursor.path = path.cgPath
+        
+        let aNLX: CGFloat = 0
+        let aNLY: CGFloat = 0
+        let aNLW: CGFloat = aWidthFrame
+        let aNLH: CGFloat = 90 - 0.5
+        numLabel.frame = CGRect(x: aNLX, y: aNLY, width: aNLW, height: aNLH)
+        numLabel.backgroundColor = UIColor.purple
+        
+        let aLVY: CGFloat = numLabel.frame.maxY - 0.5
         let aLVH: CGFloat = 0.5
         lineView.frame = CGRect(x: aNLX, y: aLVY, width: aNLW, height: aLVH)
-        
-        
+    }
+    
+    /// 去后台
+    @objc fileprivate func enterBack() {
+        // 移除动画
+        cursor.removeAnimation(forKey: "kOpacityAnimation")
+    }
+    
+    /// 回前台
+    @objc fileprivate func becomeActive() {
+        // 重新添加动画
+        cursor.add(opacityAnimation, forKey: "kOpacityAnimation")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -85,7 +106,72 @@ class SVerifyCodeNumView: UIView {
     }
 }
 
+// MARK:- UI 创建
+extension SVerifyCodeNumView {
+    private func setupUIView() {
+        
+        numLabel.textAlignment = .center
+        numLabel.font = UIFont.systemFont(ofSize: 17)
+        numLabel.textColor = UIColor.yellow
+        self.addSubview(numLabel)
+        
+        
+        lineView.backgroundColor = UIColor.blue
+        self.addSubview(lineView)
+        
+        
+        
+    }
+}
+
 // MARK:- 外部调用
 extension SVerifyCodeNumView {
+    /// 设置光标是否隐藏
+    ///
+    /// - Parameter isHidden: 是否隐藏
+    open func setCursorStatus(_ isHidden: Bool) {
+        if isHidden {
+            cursor.removeAnimation(forKey: "kOpacityAnimation")
+        }
+        else {
+            cursor.add(opacityAnimation, forKey: "kOpacityAnimation")
+        }
+        
+        UIView.animate(withDuration: 0.25) {
+            self.cursor.isHidden = isHidden
+        }
+    }
     
+    /// 验证码赋值，并修改线条颜色
+    ///
+    /// - Parameter num: 验证码
+    open func setNum(num: String?) {
+        numLabel.text = num
+    }
+    
+    /// 设置底部线条是否为焦点
+    ///
+    /// - Parameter isFocus: 是否是焦点
+    open func setBottomLineFocus(isFocus: Bool) {
+        if isFocus {
+            lineView.backgroundColor = UIColor.blue
+            
+        } else {
+            lineView.backgroundColor = UIColor.red
+        }
+    }
+    
+    /// 获取当前的验证码
+    ///
+    /// - Returns: 验证码
+    open func getNum() -> String {
+        return numLabel.text ?? ""
+    }
+    
+    /// 返回验证码值
+    ///
+    /// - Returns: 验证码数值
+    open func getNum() -> String? {
+        return numLabel.text
+    }
 }
