@@ -10,6 +10,11 @@ import UIKit
 
 class SLoginController: UIViewController {
 
+    /// 登录按钮
+    var sLoginBtn = SButtonView()
+    /// 手机号
+    var phoneNumber = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +32,7 @@ class SLoginController: UIViewController {
         
         
         /// 登录按钮
-        let sLoginBtn = SButtonView(frame: CGRect(x: 0, y: sPhoneView.frame.maxY + 30, width: kScreenWidth, height: 50))
+        sLoginBtn = SButtonView(frame: CGRect(x: 0, y: sPhoneView.frame.maxY + 30, width: kScreenWidth, height: 50))
         sLoginBtn.delegate = self
         self.view.addSubview(sLoginBtn)
         
@@ -57,8 +62,19 @@ extension SLoginController: SPhoneNumberViewDelegate {
     }
     
     func phoneTextField(text: String) {
-        
-        print("phoneTextField.text = \(text)")
+        /*
+         让按钮无法点击的2种方法
+         1.button.enabled = NO; 此时会进入UIControlStateDisabled
+         2.button.userInterctionEnabled = NO;此时不会进入UIControlStateDisabled，继续保持当前的状态
+         */
+        if text.count == 11 { // 可以点击
+            sLoginBtn.setButtonEnabled(enabled: true, color: UIColor.blue)
+            // 给 手机号变量 赋值
+            phoneNumber = text
+        } else {// 不可点击
+            let aColor = UIColor(red: 209/255.0, green: 209/255.0, blue: 209/255.0, alpha: 1)
+            sLoginBtn.setButtonEnabled(enabled: false, color: aColor)
+        }
     }
 }
 
@@ -67,6 +83,24 @@ extension SLoginController: SButtonViewDelegate {
     
     func loginButtonClick() { // phoneNumber: String
         print("点击了 按钮 ")
+        
+        if (phoneNumber.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty)  {
+            print("手机号不能为空")
+            return
+        }
+
+        if phoneNumber.count != 11 {
+            print("手机号码不正确")
+            return
+        }
+
+        /// 判断手机号是否正确
+        if  !isTelNumber(num: phoneNumber) {
+            print("手机号码不正确")
+            return
+        }
+        
+        print("phoneNumber = \(phoneNumber), 进行跳转")
     }
 }
 
@@ -78,7 +112,5 @@ extension SLoginController: SLoginTipsViewDelegate {
         
         let agreeVC = SAgreementController()
         self.navigationController?.pushViewController(agreeVC, animated: true)
-        
     }
-
 }

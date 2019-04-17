@@ -34,34 +34,19 @@ class SButtonView: UIView {
     }
 }
 
+// MARK:- 外部事件
+extension SButtonView {
+    func setButtonEnabled(enabled: Bool, color: UIColor) {
+        loginBtn.backgroundColor = color
+        loginBtn.isUserInteractionEnabled = enabled
+    }
+}
+
 // MARK:- 点击事件
 extension SButtonView {
     /// 确定按钮
     @objc private func loginClick() {
-        
-//        let phoneText = phoneField.text!
-//
-//        if (phoneText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty)  {
-//            print("手机号不能为空")
-//            return
-//        }
-//
-//        if phoneText.count != 11 {
-//            print("手机号码不正确")
-//            return
-//        }
-//
-//        /// 判断手机号是否正确
-//        if  !isTelNumber(num: phoneText) {
-//            print("手机号码不正确")
-//            return
-//        }
-//
-//        let text = phoneField.text ?? ""
-//        delegate?.loginButtonClick(phoneNumber: "123123")
-        
         delegate?.loginButtonClick()
-
     }
 }
 

@@ -47,19 +47,6 @@ extension SPhoneNumberView {
     /// 手机号输入框
     @objc func actButton(textField: UITextField){
         let text = textField.text ?? ""
-        
-        /*
-         让按钮无法点击的2种方法
-         1.button.enabled = NO; 此时会进入UIControlStateDisabled
-         2.button.userInterctionEnabled = NO;此时不会进入UIControlStateDisabled，继续保持当前的状态
-         */
-        //        if text.count == 11 {
-        //            loginBtn.backgroundColor = UIColor.blue
-        //            loginBtn.isUserInteractionEnabled = true
-        //        } else {
-        //            loginBtn.backgroundColor = UIColor(red: 209/255.0, green: 209/255.0, blue: 209/255.0, alpha: 1)
-        //            loginBtn.isUserInteractionEnabled = false
-        //        }
         self.delegate?.phoneTextField(text: text)
     }
 }
