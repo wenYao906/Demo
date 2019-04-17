@@ -31,6 +31,7 @@
 		203A87B922656EA00045B57C /* SButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B822656EA00045B57C /* SButtonView.swift */; };
 		203A87BB226579650045B57C /* SLoginTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87BA226579650045B57C /* SLoginTipsView.swift */; };
 		20EA571522657C1F003FE2D2 /* SPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA571422657C1F003FE2D2 /* SPhoneNumberView.swift */; };
+		20EA575C2266BC74003FE2D2 /* SVerificationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA575B2266BC74003FE2D2 /* SVerificationCodeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		203A87B822656EA00045B57C /* SButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SButtonView.swift; sourceTree = "<group>"; };
 		203A87BA226579650045B57C /* SLoginTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLoginTipsView.swift; sourceTree = "<group>"; };
 		20EA571422657C1F003FE2D2 /* SPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPhoneNumberView.swift; sourceTree = "<group>"; };
+		20EA575B2266BC74003FE2D2 /* SVerificationCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVerificationCodeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				203A878C225D9AFC0045B57C /* Classes */,
-				203A870E225D8C8C0045B57C /* AppDelegate.swift */,
 				203A8710225D8C8C0045B57C /* ViewController.swift */,
 				203A8712225D8C8C0045B57C /* Main.storyboard */,
 				203A8715225D8C8E0045B57C /* Assets.xcassets */,
@@ -163,6 +164,7 @@
 		203A878C225D9AFC0045B57C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				203A870E225D8C8C0045B57C /* AppDelegate.swift */,
 				203A879D225EC1E30045B57C /* Other */,
 				203A878D225D9AFC0045B57C /* Main */,
 				203A8792225D9AFC0045B57C /* Login */,
@@ -226,6 +228,7 @@
 				203A8799225D9B290045B57C /* SLoginController.swift */,
 				203A87A6225F12BA0045B57C /* SPhoneAreaController.swift */,
 				203A87B2226424F10045B57C /* SAgreementController.swift */,
+				20EA575B2266BC74003FE2D2 /* SVerificationCodeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20EA575C2266BC74003FE2D2 /* SVerificationCodeController.swift in Sources */,
 				203A87B922656EA00045B57C /* SButtonView.swift in Sources */,
 				203A87A5225EF0A70045B57C /* Ext_String.swift in Sources */,
 				20EA571522657C1F003FE2D2 /* SPhoneNumberView.swift in Sources */,

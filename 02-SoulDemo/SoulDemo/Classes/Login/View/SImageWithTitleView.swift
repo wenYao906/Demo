@@ -1,5 +1,5 @@
 //
-//  SImageWithTitleView.swift
+//  SaIconWithTitleView.swift
 //  SoulDemo
 //
 //  Created by study on 2019/4/16.
@@ -10,6 +10,11 @@ import UIKit
 
 //// 图片 和 标签  如：手机图片和标题（手机号登录）
 class SImageWithTitleView: UIView {
+    
+    /// 左侧图片
+    private let aIcon = UIImageView()
+    /// 标题
+    private let headLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,6 +27,15 @@ class SImageWithTitleView: UIView {
     }
 }
 
+// MARK:- 外界传值
+extension SImageWithTitleView {
+    open func setData(image: String, text: String) {
+        aIcon.image = UIImage(named: image) 
+        headLabel.text = text 
+    }
+}
+
+// MARK:- 创建UI界面
 extension SImageWithTitleView {
     /// 标签 - 图片(左) 和 文本框（右）
     private func setupTitleView(){
@@ -32,19 +46,15 @@ extension SImageWithTitleView {
         let aIH: CGFloat = 18
         let aIX: CGFloat = 40
         let aIY: CGFloat = 0
-        let aIFrame = CGRect(x: aIX, y: aIY, width: aIW, height: aIH)
-        let image = UIImageView(frame: aIFrame)
-        image.image = UIImage(named: "phone")
         
-        bgView.addSubview(image)
-        
+        aIcon.frame = CGRect(x: aIX, y: aIY, width: aIW, height: aIH)
+        bgView.addSubview(aIcon)
         
         // 文本
         let aHLX: CGFloat = 66
         let aHLW: CGFloat = 60
-        let aHLFrame = CGRect(x: aHLX, y: aIY, width: aHLW, height: aIH)
-        let headLabel = UILabel(frame: aHLFrame)
-        headLabel.text = "手机号码"
+
+        headLabel.frame = CGRect(x: aHLX, y: aIY, width: aHLW, height: aIH)
         headLabel.textColor = UIColor.black
         headLabel.textAlignment = .center
         headLabel.font = UIFont.systemFont(ofSize: 14)

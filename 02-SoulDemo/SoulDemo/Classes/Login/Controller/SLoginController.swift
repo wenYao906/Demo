@@ -23,6 +23,7 @@ class SLoginController: UIViewController {
         self.view.addSubview(topicView)
         
         let imagView = SImageWithTitleView(frame: CGRect(x: 0, y: topicView.frame.maxY, width: kScreenWidth, height: 20))
+        imagView.setData(image: "phone", text: "手机号码")
         self.view.addSubview(imagView)
         
         /// 手机号码输入框
