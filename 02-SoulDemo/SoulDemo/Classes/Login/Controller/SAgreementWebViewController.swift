@@ -1,5 +1,5 @@
 //
-//  SAgreementController.swift
+//  SAgreementWebViewController.swift
 //  SoulDemo
 //
 //  Created by study on 2019/4/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SAgreementController: UIViewController {
+class SAgreementWebViewController: UIViewController {
 
     private let webView = UIWebView()
     
@@ -47,7 +47,7 @@ class SAgreementController: UIViewController {
  
  */
 
-extension SAgreementController: UIWebViewDelegate {
+extension SAgreementWebViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
         let requestString = request.url?.absoluteString
         //核心代码

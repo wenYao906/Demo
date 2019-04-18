@@ -11,9 +11,10 @@ import UIKit
 class SLoginController: UIViewController {
 
     /// 登录按钮
-    var sLoginBtn = SButtonView()
+    private var sLoginBtn = SButtonView()
+    
     /// 手机号
-    var phoneNumber = ""
+    private var phoneNumber = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,8 @@ class SLoginController: UIViewController {
         
         
         /// 提示
-        let sTipsView = SLoginTipsView(frame: CGRect(x: 0, y: sLoginBtn.frame.maxY, width: kScreenWidth, height: kScreenHeight - sLoginBtn.frame.maxY))
+        let sTipsView = SLoginTipsView(frame: CGRect(x: 0, y: kScreenHeight - 20, width: kScreenWidth, height: 20))
+        sTipsView.setupLabel(str: "我已阅读并同意Soul用户协议", normalRange: NSMakeRange(0, 6), selectedRange: NSMakeRange(7, 8))
         sTipsView.delegate = self
         self.view.addSubview(sTipsView)
     }
@@ -111,7 +113,7 @@ extension SLoginController: SLoginTipsViewDelegate {
     func soulUserAgreementConsent() {
         print("点击了 同意协议")
         
-        let agreeVC = SAgreementController()
+        let agreeVC = SAgreementWebViewController()
         self.navigationController?.pushViewController(agreeVC, animated: true)
     }
 }

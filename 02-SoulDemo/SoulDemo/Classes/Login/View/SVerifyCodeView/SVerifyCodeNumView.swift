@@ -59,6 +59,7 @@ class SVerifyCodeNumView: UIView {
         super.init(frame: frame)
         
         setupUIView()
+        
 
         NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
         
@@ -108,7 +109,7 @@ extension SVerifyCodeNumView {
         
         numLabel.textAlignment = .center
         numLabel.font = UIFont.systemFont(ofSize: 17)
-        numLabel.textColor = UIColor.yellow
+        numLabel.textColor = UIColor.black
         self.addSubview(numLabel)
         
         
@@ -150,7 +151,7 @@ extension SVerifyCodeNumView {
             lineView.backgroundColor = UIColor.blue
             
         } else {
-            lineView.backgroundColor = UIColor.red
+            lineView.backgroundColor = UIColor.gray
         }
     }
     

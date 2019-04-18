@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window?.backgroundColor = UIColor.white
         
-        // 登录界面
+        // 登录界面 SLoginController SVerificationCodeController
         self.window?.rootViewController = UINavigationController(rootViewController: SVerificationCodeController())
 //        self.window?.rootViewController = UINavigationController(rootViewController: SAgreementController())
 

@@ -8,11 +8,6 @@
 
 import UIKit
 
-/// 整个屏幕的宽度
-let kScreenWidth: CGFloat = UIScreen.main.bounds.width
-/// 整个屏幕的d高度
-let kScreenHeight: CGFloat = UIScreen.main.bounds.height
-
 class SVerifyCodeView: UIView {
 
     /// 输入值改变
@@ -202,5 +197,6 @@ extension SVerifyCodeView: UITextFieldDelegate {
             inputFinish?(inputStr)
             allCursorHidden()
         }
+        
     }
 }

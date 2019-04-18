@@ -25,11 +25,14 @@
 		203A87AD226034440045B57C /* SPlistTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87AC226034440045B57C /* SPlistTool.swift */; };
 		203A87AF22641B530045B57C /* SFuncTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87AE22641B530045B57C /* SFuncTool.swift */; };
 		203A87B1226424C70045B57C /* SUserAgreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 203A87B0226424C60045B57C /* SUserAgreement.html */; };
-		203A87B3226424F10045B57C /* SAgreementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B2226424F10045B57C /* SAgreementController.swift */; };
+		203A87B3226424F10045B57C /* SAgreementWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B2226424F10045B57C /* SAgreementWebViewController.swift */; };
 		203A87B5226565900045B57C /* SLoginTopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B4226565900045B57C /* SLoginTopicView.swift */; };
 		203A87B7226568B30045B57C /* SImageWithTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B6226568B30045B57C /* SImageWithTitleView.swift */; };
 		203A87B922656EA00045B57C /* SButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87B822656EA00045B57C /* SButtonView.swift */; };
 		203A87BB226579650045B57C /* SLoginTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A87BA226579650045B57C /* SLoginTipsView.swift */; };
+		206ECFE522680E0E00ABFE99 /* SVerifyCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206ECFE222680E0E00ABFE99 /* SVerifyCodeTextView.swift */; };
+		206ECFE622680E0E00ABFE99 /* SVerifyCodeNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206ECFE322680E0E00ABFE99 /* SVerifyCodeNumView.swift */; };
+		206ECFE722680E0E00ABFE99 /* SVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206ECFE422680E0E00ABFE99 /* SVerifyCodeView.swift */; };
 		20EA571522657C1F003FE2D2 /* SPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA571422657C1F003FE2D2 /* SPhoneNumberView.swift */; };
 		20EA575C2266BC74003FE2D2 /* SVerificationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA575B2266BC74003FE2D2 /* SVerificationCodeController.swift */; };
 /* End PBXBuildFile section */
@@ -76,11 +79,14 @@
 		203A87AC226034440045B57C /* SPlistTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPlistTool.swift; sourceTree = "<group>"; };
 		203A87AE22641B530045B57C /* SFuncTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFuncTool.swift; sourceTree = "<group>"; };
 		203A87B0226424C60045B57C /* SUserAgreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SUserAgreement.html; sourceTree = "<group>"; };
-		203A87B2226424F10045B57C /* SAgreementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAgreementController.swift; sourceTree = "<group>"; };
+		203A87B2226424F10045B57C /* SAgreementWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAgreementWebViewController.swift; sourceTree = "<group>"; };
 		203A87B4226565900045B57C /* SLoginTopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLoginTopicView.swift; sourceTree = "<group>"; };
 		203A87B6226568B30045B57C /* SImageWithTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SImageWithTitleView.swift; sourceTree = "<group>"; };
 		203A87B822656EA00045B57C /* SButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SButtonView.swift; sourceTree = "<group>"; };
 		203A87BA226579650045B57C /* SLoginTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLoginTipsView.swift; sourceTree = "<group>"; };
+		206ECFE222680E0E00ABFE99 /* SVerifyCodeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVerifyCodeTextView.swift; sourceTree = "<group>"; };
+		206ECFE322680E0E00ABFE99 /* SVerifyCodeNumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVerifyCodeNumView.swift; sourceTree = "<group>"; };
+		206ECFE422680E0E00ABFE99 /* SVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVerifyCodeView.swift; sourceTree = "<group>"; };
 		20EA571422657C1F003FE2D2 /* SPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPhoneNumberView.swift; sourceTree = "<group>"; };
 		20EA575B2266BC74003FE2D2 /* SVerificationCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVerificationCodeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,7 +233,7 @@
 			children = (
 				203A8799225D9B290045B57C /* SLoginController.swift */,
 				203A87A6225F12BA0045B57C /* SPhoneAreaController.swift */,
-				203A87B2226424F10045B57C /* SAgreementController.swift */,
+				203A87B2226424F10045B57C /* SAgreementWebViewController.swift */,
 				20EA575B2266BC74003FE2D2 /* SVerificationCodeController.swift */,
 			);
 			path = Controller;
@@ -250,6 +256,7 @@
 		203A8796225D9AFC0045B57C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				206ECFE122680E0E00ABFE99 /* SVerifyCodeView */,
 				203A879B225D9B610045B57C /* SLoginView.swift */,
 				203A87B4226565900045B57C /* SLoginTopicView.swift */,
 				203A87B6226568B30045B57C /* SImageWithTitleView.swift */,
@@ -289,6 +296,16 @@
 				203A87A4225EF0A70045B57C /* Ext_String.swift */,
 			);
 			path = Ext;
+			sourceTree = "<group>";
+		};
+		206ECFE122680E0E00ABFE99 /* SVerifyCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				206ECFE222680E0E00ABFE99 /* SVerifyCodeTextView.swift */,
+				206ECFE322680E0E00ABFE99 /* SVerifyCodeNumView.swift */,
+				206ECFE422680E0E00ABFE99 /* SVerifyCodeView.swift */,
+			);
+			path = SVerifyCodeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,10 +443,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				20EA575C2266BC74003FE2D2 /* SVerificationCodeController.swift in Sources */,
+				206ECFE522680E0E00ABFE99 /* SVerifyCodeTextView.swift in Sources */,
+				206ECFE722680E0E00ABFE99 /* SVerifyCodeView.swift in Sources */,
 				203A87B922656EA00045B57C /* SButtonView.swift in Sources */,
 				203A87A5225EF0A70045B57C /* Ext_String.swift in Sources */,
 				20EA571522657C1F003FE2D2 /* SPhoneNumberView.swift in Sources */,
 				203A87BB226579650045B57C /* SLoginTipsView.swift in Sources */,
+				206ECFE622680E0E00ABFE99 /* SVerifyCodeNumView.swift in Sources */,
 				203A87AF22641B530045B57C /* SFuncTool.swift in Sources */,
 				203A879A225D9B290045B57C /* SLoginController.swift in Sources */,
 				203A87B7226568B30045B57C /* SImageWithTitleView.swift in Sources */,
@@ -440,7 +460,7 @@
 				203A87AD226034440045B57C /* SPlistTool.swift in Sources */,
 				203A870F225D8C8C0045B57C /* AppDelegate.swift in Sources */,
 				203A87A0225EC1F90045B57C /* SFrameTool.swift in Sources */,
-				203A87B3226424F10045B57C /* SAgreementController.swift in Sources */,
+				203A87B3226424F10045B57C /* SAgreementWebViewController.swift in Sources */,
 				203A87A7225F12BA0045B57C /* SPhoneAreaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

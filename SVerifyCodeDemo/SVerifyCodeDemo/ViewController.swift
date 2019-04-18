@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let array = Array
+    
     lazy var codeView: SVerifyCodeView = {
         let codeView =  SVerifyCodeView (inputTextNum: 4)
         self.view.addSubview(codeView)
@@ -35,8 +35,8 @@ class ViewController: UIViewController {
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        view.endEditing(true)
+//    }
 }
 
