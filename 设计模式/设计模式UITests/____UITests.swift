@@ -1,14 +1,8 @@
-//
-//  SoulDemoUITests.swift
-//  SoulDemoUITests
-//
-//  Created by study on 2019/4/10.
-//  Copyright © 2019年 WY. All rights reserved.
-//
+//___FILEHEADER___
 
 import XCTest
 
-class SoulDemoUITests: XCTestCase {
+class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,11 +23,6 @@ class SoulDemoUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        
-  
-        
-        
     }
 
 }

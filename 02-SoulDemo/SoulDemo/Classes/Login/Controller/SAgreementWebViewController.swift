@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Soul 用户协议
 class SAgreementWebViewController: UIViewController {
 
     private let webView = UIWebView()

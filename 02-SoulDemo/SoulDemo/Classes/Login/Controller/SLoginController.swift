@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 登录界面
 class SLoginController: UIViewController {
 
     /// 登录按钮

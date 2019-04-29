@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SoulDemo
+//  不规则标签
 //
-//  Created by study on 2019/4/10.
+//  Created by study on 2019/4/29.
 //  Copyright © 2019年 WY. All rights reserved.
 //
 
@@ -13,18 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        window?.backgroundColor = UIColor.white
         
-        // 登录界面 SLoginController SVerificationCodeController
-        self.window?.rootViewController = UINavigationController(rootViewController: SLoginController())
-//        self.window?.rootViewController = UINavigationController(rootViewController: SAgreementController())
 
         
-        window?.makeKeyAndVisible()
-
-
+        window?.rootViewController = WYLabelController()
+        
+        
         return true
     }
 
