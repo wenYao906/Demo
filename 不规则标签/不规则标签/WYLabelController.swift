@@ -19,13 +19,12 @@ typealias LabelProtocol = UICollectionViewDelegate & UICollectionViewDataSource 
 class WYLabelController: UIViewController {
     
     private var colltionView : UICollectionView?
-    var dataArr = NSMutableArray()//数据源
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
-         getData()
+//         getData()
     }
 }
 
@@ -33,6 +32,9 @@ extension WYLabelController {
     /// 初始化 UICollectionView 并注册 UICollectionViewCell
     private func setupView() {
         let layout = UICollectionViewFlowLayout()
+        // 必须写，用来自动计算行高
+        layout.estimatedItemSize = CGSize(width: 100, height: 30)
+        
         colltionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: width, height: height), collectionViewLayout: layout)
         
         //注册一个cell
@@ -41,16 +43,7 @@ extension WYLabelController {
         colltionView?.dataSource = self;
         colltionView?.backgroundColor = UIColor.white
         
-        //设置每一个cell的宽高
-        layout.itemSize = CGSize(width: (width - 30)/2, height: 30)
         self.view.addSubview(colltionView!)
-    }
-    
-    func getData(){
-        dataArr.add("Tomcat")
-        dataArr.add("Jetty")
-        dataArr.add("Apache")
-        dataArr.add("Jboss")
     }
 }
 
@@ -67,3 +60,5 @@ extension WYLabelController: LabelProtocol {
         return cell
     }
 }
+
+
