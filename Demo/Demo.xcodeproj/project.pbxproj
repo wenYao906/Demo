@@ -15,6 +15,10 @@
 		201BA069296EB74800F0BABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201BA067296EB74800F0BABB /* LaunchScreen.storyboard */; };
 		204F2DFC296FABDC00B47D86 /* SwiftRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204F2DFB296FABDC00B47D86 /* SwiftRoot.swift */; };
 		204F2DFE296FE74400B47D86 /* SwiftRoot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204F2DFD296FE74300B47D86 /* SwiftRoot.storyboard */; };
+		205FD3D129BF0568006BCE9D /* SWTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FD3D029BF0568006BCE9D /* SWTableViewController.swift */; };
+		205FD3D329BF05AF006BCE9D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FD3D229BF05AF006BCE9D /* BaseModel.swift */; };
+		205FD3D729BF1601006BCE9D /* BaseJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 205FD3D429BF0D1E006BCE9D /* BaseJson.json */; };
+		20A7870C29BEB4CC00C24422 /* WeakScriptMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7870B29BEB4CC00C24422 /* WeakScriptMessage.swift */; };
 		20DCE3B429BB24E40034833A /* SwfitBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DCE3B329BB24E40034833A /* SwfitBaseController.swift */; };
 		20DCE3B629BB30BD0034833A /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DCE3B529BB30BD0034833A /* BaseWebViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +34,10 @@
 		201BA06A296EB74800F0BABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		204F2DFB296FABDC00B47D86 /* SwiftRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRoot.swift; sourceTree = "<group>"; };
 		204F2DFD296FE74300B47D86 /* SwiftRoot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SwiftRoot.storyboard; sourceTree = "<group>"; };
+		205FD3D029BF0568006BCE9D /* SWTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTableViewController.swift; sourceTree = "<group>"; };
+		205FD3D229BF05AF006BCE9D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		205FD3D429BF0D1E006BCE9D /* BaseJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BaseJson.json; sourceTree = "<group>"; };
+		20A7870B29BEB4CC00C24422 /* WeakScriptMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakScriptMessage.swift; sourceTree = "<group>"; };
 		20DCE3B329BB24E40034833A /* SwfitBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwfitBaseController.swift; sourceTree = "<group>"; };
 		20DCE3B529BB30BD0034833A /* BaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +99,10 @@
 			children = (
 				20DCE3B329BB24E40034833A /* SwfitBaseController.swift */,
 				20DCE3B529BB30BD0034833A /* BaseWebViewController.swift */,
+				20A7870B29BEB4CC00C24422 /* WeakScriptMessage.swift */,
+				205FD3D029BF0568006BCE9D /* SWTableViewController.swift */,
+				205FD3D229BF05AF006BCE9D /* BaseModel.swift */,
+				205FD3D429BF0D1E006BCE9D /* BaseJson.json */,
 			);
 			path = SwiftBase;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205FD3D729BF1601006BCE9D /* BaseJson.json in Resources */,
 				204F2DFE296FE74400B47D86 /* SwiftRoot.storyboard in Resources */,
 				201BA069296EB74800F0BABB /* LaunchScreen.storyboard in Resources */,
 				201BA066296EB74800F0BABB /* Assets.xcassets in Resources */,
@@ -166,12 +179,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205FD3D329BF05AF006BCE9D /* BaseModel.swift in Sources */,
 				20DCE3B629BB30BD0034833A /* BaseWebViewController.swift in Sources */,
+				20A7870C29BEB4CC00C24422 /* WeakScriptMessage.swift in Sources */,
 				201BA061296EB74300F0BABB /* ViewController.swift in Sources */,
 				201BA05D296EB74300F0BABB /* AppDelegate.swift in Sources */,
 				20DCE3B429BB24E40034833A /* SwfitBaseController.swift in Sources */,
 				201BA05F296EB74300F0BABB /* SceneDelegate.swift in Sources */,
 				204F2DFC296FABDC00B47D86 /* SwiftRoot.swift in Sources */,
+				205FD3D129BF0568006BCE9D /* SWTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
