@@ -8,77 +8,67 @@
 import UIKit
 
 class SwfitBaseController : UITableViewController {
-    
-//    let baseContentModel = [
-//        let model = BaseListModel()
-//    model.
-////        BaseListModel(id: "1", title: "创建UITableViewController教程", url: "https://www.ralfebert.com/ios-examples/uikit/uitableviewcontroller/"),
-////        BaseListModel(id: "2", title: "didSet"),
-////        BaseListModel(id: "3", title: "创建WKWebView教程", url: "https://blog.csdn.net/sufubo/article/details/103123181"),
-//    ]
-    
-//    private lazy var aModel: BaseListModel = {
-//        let json = parseJSON()
-//       let model = json
-//        print("model ====== \(json)")
-//
-//        return model
-//    }()
-    
-    override func viewDidLoad() {
+
+    private lazy var model: [BaseList_listModel] = {
         let json = parseJSON()
-        print("json ====== \(json)")
-    }
+        let aModel = json
+        return aModel!
+    }()
+   
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3  //BaseListModel.count
+        return self.model.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "baseCell", for: indexPath)
     
-//        let baseModel = BaseListModel[indexPath.row]
-        cell.textLabel?.text =  "123"//baseModel.title
+        let aModel = self.model[indexPath.row]
+        cell.textLabel?.text = aModel.title
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let webVC = BaseWebViewController()
-//        let baseModel = BaseListModel[indexPath.row]
-//        if let urlString = "http://www.baidu.com" { // baseModel.url
-//            webVC.urlString = urlString
-            webVC.urlString = "http://www.baidu.com"
-//        }
         
-        self.navigationController?.pushViewController(webVC, animated: true)
+        let aModel = self.model[indexPath.row]
+        if let urlString = aModel.url {
+            webVC.urlString = urlString
+            self.navigationController?.pushViewController(webVC, animated: true)
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "section \(section)"
     }
     
-    private func parseJSON() {
+    /// 获取json中的数据，并返回
+    private func parseJSON() -> [BaseList_listModel]? {
         // BaseJson.json 需要添加到 Copy Bundle Resource
         guard let path = Bundle.main.path(forResource: "BaseJson", ofType: "json") else {
             print("\n-------> bundle path error")
-            return
+            return nil
         }
         let url = URL(fileURLWithPath: path)
         
         do {
             let jsonData = try Data(contentsOf: url)
-            let response = try JSONDecoder().decode(BaseListModel.self, from: jsonData)
+            let response:BaseListModel = try JSONDecoder().decode(BaseListModel.self, from: jsonData)
+            
             print("\n-------> response: \(response)")
+            return response.list
         }
         catch {
             print("\n====> error: \(error)" )
+//            return error
         }
-        return
+        return nil
     }
 
 }
