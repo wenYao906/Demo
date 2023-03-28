@@ -15,9 +15,10 @@ class SwiftRoot: UIViewController {
     /// 1.1.5 创建一个变量，用来记录卡片的点击次数
     var flipCount: Int = 0
     
+    /// 1.1.6 创建一个变量，用来保存所有的卡片
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
 
     /// 1.1.1 在SB中创建一个UIButton，连线到 ViewController 类中

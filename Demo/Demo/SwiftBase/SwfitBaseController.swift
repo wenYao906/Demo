@@ -14,7 +14,6 @@ class SwfitBaseController : UITableViewController {
         let aModel = json
         return aModel!
     }()
-   
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
