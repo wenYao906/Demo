@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,8 +38,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z5-sq-UTj">
                                 <rect key="frame" x="50" y="100" width="50" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="👻"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <connections>
                                     <action selector="touchCard:" destination="AZy-BI-KB6" eventType="touchUpInside" id="GuG-7z-txo"/>
                                 </connections>
@@ -56,8 +56,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8h-fs-PPl">
                                 <rect key="frame" x="131" y="100" width="50" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="👻"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <connections>
                                     <action selector="touchCard:" destination="AZy-BI-KB6" eventType="touchUpInside" id="cZS-aw-YcD"/>
                                 </connections>
@@ -65,8 +64,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGC-tY-gQJ">
                                 <rect key="frame" x="207" y="100" width="50" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="👻"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <connections>
                                     <action selector="touchCard:" destination="AZy-BI-KB6" eventType="touchUpInside" id="ZiX-cL-FHY"/>
                                 </connections>
@@ -74,8 +72,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1D-EO-Xoe">
                                 <rect key="frame" x="283" y="100" width="50" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="👻"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <connections>
                                     <action selector="touchCard:" destination="AZy-BI-KB6" eventType="touchUpInside" id="C8K-wB-ZXx"/>
                                 </connections>
@@ -91,6 +88,10 @@
                     <navigationItem key="navigationItem" title="Swift-斯坦福-入口" id="vME-VV-75j"/>
                     <connections>
                         <outlet property="flipCountLabel" destination="dfR-Cy-BMj" id="Wt2-OQ-wsa"/>
+                        <outletCollection property="cardsBtn" destination="1Z5-sq-UTj" collectionClass="NSMutableArray" id="Iis-eH-W9U"/>
+                        <outletCollection property="cardsBtn" destination="c8h-fs-PPl" collectionClass="NSMutableArray" id="nIY-Bf-Vfo"/>
+                        <outletCollection property="cardsBtn" destination="uGC-tY-gQJ" collectionClass="NSMutableArray" id="OfR-W5-1dT"/>
+                        <outletCollection property="cardsBtn" destination="m1D-EO-Xoe" collectionClass="NSMutableArray" id="GUK-a9-1WS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msG-5s-Hyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -161,4 +162,9 @@
             <point key="canvasLocation" x="816" y="1035"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
